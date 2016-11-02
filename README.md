@@ -36,7 +36,6 @@ The current URL for the RISC script shall be provided by email.
 
 ### Network Fingerprinting:
 #### IP, DNS, ISP, Confidence factors, Accuracy Radius, User Type, Continent, Country, Subdivisions, City, Postal Code, Metro Code, Time Zone, Latitude/Longitude, Domain, Page Load Dynamics, Threat Intelligence Correlation Engines
-### Sensory network data from global ISPs
 
 ## Form Data
 
