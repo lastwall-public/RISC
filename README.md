@@ -15,14 +15,6 @@ The script is placed in the webpage which has the login action. Ideally the data
 
 See [Integration] (Integration.md) for details of accessing the API from a server-side module.
 
-## API Key
-
-The API Key shall be provided by email.
-
-## Authorisation Token
-
-The Authorisation token shall be provided by email.
-
 ## RISC Script
 
 ### URL for RISC Script
