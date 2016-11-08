@@ -24,10 +24,10 @@ The current URL for the RISC script shall be provided by email.
 ## Data Elements Used for Risk Profiling
 
 ### Device fingerprinting:
-#### User Agent, Operating System, Platform, Language, Screen Dimensions, Window Dimensions, Color Depth, Plugin Info, Fonts Info, Session and Local Storages, Dynamic Plugin Behavior, Social Network Reputation Behavior (optional)
+User Agent, Operating System, Platform, Language, Screen Dimensions, Window Dimensions, Color Depth, Plugin Info, Fonts Info, Session and Local Storages, Dynamic Plugin Behavior, Social Network Reputation Behavior (optional)
 
 ### Network Fingerprinting:
-#### IP, DNS, ISP, Confidence factors, Accuracy Radius, User Type, Continent, Country, Subdivisions, City, Postal Code, Metro Code, Time Zone, Latitude/Longitude, Domain, Page Load Dynamics, Threat Intelligence Network Data
+IP, DNS, ISP, Confidence factors, Accuracy Radius, User Type, Continent, Country, Subdivisions, City, Postal Code, Metro Code, Time Zone, Latitude/Longitude, Domain, Page Load Dynamics, Threat Intelligence Network Data
 
 ## Form Data
 
