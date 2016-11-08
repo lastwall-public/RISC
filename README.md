@@ -1,7 +1,7 @@
 ![Lastwall Logo](lw-logo.jpg) 
 # LastWall RISC - Risk based Firewall (Authentication/Registration)
 
-The LastWall Authentiation Firewall system provides a javascript embeddable in your appropriate page.  The authentication fields, that need to be risk-evaluated are enabled via the script hooks. On submit, the script connects to the LastWall API and returns the trust value / the risk score associated with the username / password combination. Based on browser data, the API intelligently creates and assigns appropriate device profiles to the user. One user might have multiple devices profiles etc.
+The LastWall Identity Firewall system provides a javascript embeddable in your appropriate page.  The page form fields, that need to be risk-evaluated are enabled via the script hooks. On submit, the script connects to the LastWall API and returns the trust value / the risk score associated with the Identity associated with that access. 
 
 ## Overview
 
@@ -9,7 +9,7 @@ An embeddable javascript is provided.  It needs to be initialized appropriately 
 
 ## Script Usage
 
-The script is placed in the webpage which has the login action. Ideally the data collected by the script, is collected by a server-side program and then a API call made from the server-side as part of the authentication workflow.
+The script is placed in the webpage which has the login or registration action. Ideally the data collected by the script, is collected by a server-side program and then a API call made from the server-side as part of the backend business application (example: Login) workflow.
 
 ## API usage
 
@@ -24,10 +24,10 @@ The current URL for the RISC script shall be provided by email.
 ## Data Elements Used for Risk Profiling
 
 ### Device fingerprinting:
-#### User Agent, Operating System, Platform, Language, Browser - proVer, Screen Dimensions, Window Dimensions, Color Depth, Plugin Info, Fonts Info, Session and Local Storages, Dynamic Plugin Behavior, Social Network Reputation Behavior
+#### User Agent, Operating System, Platform, Language, Screen Dimensions, Window Dimensions, Color Depth, Plugin Info, Fonts Info, Session and Local Storages, Dynamic Plugin Behavior, Social Network Reputation Behavior (optional)
 
 ### Network Fingerprinting:
-#### IP, DNS, ISP, Confidence factors, Accuracy Radius, User Type, Continent, Country, Subdivisions, City, Postal Code, Metro Code, Time Zone, Latitude/Longitude, Domain, Page Load Dynamics, Threat Intelligence Correlation Engines
+#### IP, DNS, ISP, Confidence factors, Accuracy Radius, User Type, Continent, Country, Subdivisions, City, Postal Code, Metro Code, Time Zone, Latitude/Longitude, Domain, Page Load Dynamics, Threat Intelligence Network Data
 
 ## Form Data
 
