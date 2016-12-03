@@ -65,7 +65,7 @@ Authenticates a user based on a RISC payload. Returns a trust score indicating t
 
 **Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/auth" -d '{"riscdata":"(jsonvals_riscdata)"}'"`    
 
-**Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" , "trust" : "HIGH" , "score" : "0.87538745"}`
+**Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" , "trust" : "HIGH" , "score" : "0.87538745", "digitalCookie":"2342_kfljsfoeicsldkfjowe234skfj3", "secureCookie":"2435_jl2i3rlkeod3iruwelkf3iuro23jfwe"}`
 
 ---------------------------------------
 
