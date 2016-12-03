@@ -69,6 +69,29 @@ Authenticates a user based on a RISC payload. Returns a trust score indicating t
 
 ---------------------------------------
 
+## POST - /resetCadence
+
+
+Resets the cadence of any user whose password is changed.  Returns the status.
+
+#### Required Parameters
+
+- **user** - JSON payload of data collected by "script"
+
+
+#### Return Values
+
+- **status** - String 'LW_Success' or 'LW_Failure'. If it's an LW_Failure, the specific message is included in the 'error' return value.
+
+
+### Examples
+
+**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/resetCadence" -d '{"user":"(username)"}'"`    
+
+**Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" }`
+
+---------------------------------------
+
 ## POST - /account
 
 
