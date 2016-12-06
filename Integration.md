@@ -113,6 +113,7 @@ Resets the cadence of any user whose password is changed.
 **Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/resetcadence" -d '{"username":"(username)"}'"`    
 
 **Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" }`
+
 ---------------------------------------
 
 ## POST - /account
