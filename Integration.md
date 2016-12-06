@@ -53,6 +53,11 @@ Authenticates a user based on a RISC payload. Returns a trust score indicating t
 #### Return Values
 
 - **status** - String 'LW_Success' or 'LW_Failure'. If it's an LW_Failure, the specific message is included in the 'error' return value.
+- **trust** - Trust Level (HIGH/MEDIUM/LOW).
+- **score** - Trust score (0 - 1).
+- **digitalcookie** - This needs to be returned back to the browser in json response.
+- **securecookie** - This needs to be sent to the browser through Headers.
+- **transactionid** - Transaction Id for future reference.
 
 
 ### Examples
@@ -69,7 +74,7 @@ Authorize a transaction with low trust.  This needs to be called for the transac
 
 #### Required Parameters
 
-- **transaction** - Transaction Id returned by /auth
+- **transactionid** - Transaction Id returned by /auth
 
 
 #### Return Values
@@ -121,7 +126,8 @@ Based on a RISC payload. Returns a trust score indicating the level of RISK asso
 #### Return Values
 
 - **status** - String 'LW_Success' or 'LW_Failure'. If it's an LW_Failure, the specific message is included in the 'error' return value.
-
+- **trust** - Trust Level (HIGH/MEDIUM/LOW).
+- **score** - Trust score (0 - 1).
 
 ### Examples
 
