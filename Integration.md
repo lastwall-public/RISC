@@ -59,18 +59,17 @@ Authenticates a user based on a RISC payload. Returns a trust score indicating t
 
 **Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/auth" -d '{"riscdata":"(jsonvals_riscdata)"}'"`    
 
-**Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" , "trust" : "HIGH" , "score" : "0.87538745", "digitalCookie":"2342_kfljsfoeicsldkfjowe234skfj3", "secureCookie":"2435_jl2i3rlkeod3iruwelkf3iuro23jfwe"}`
+**Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" , "trust" : "HIGH" , "score" : "0.87538745", "digitalCookie":"2342_kfljsfoeicsldkfjowe234skfj3", "secureCookie":"2435_jl2i3rlkeod3iruwelkf3iuro23jfwe", "transactionid":"a234bc567"}`
 
 ---------------------------------------
 
-## POST - /resetCadence
+## POST - /authorize
 
-
-Resets the cadence of any user whose password is changed.  Returns the status.
+Authorize a transaction with low trust.  This needs to be called for the transaction with low trust, after the verification process.
 
 #### Required Parameters
 
-- **user** - JSON payload of data collected by "script"
+- **transaction** - Transaction Id returned by /auth
 
 
 #### Return Values
@@ -80,10 +79,32 @@ Resets the cadence of any user whose password is changed.  Returns the status.
 
 ### Examples
 
-**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/resetCadence" -d '{"user":"(username)"}'"`    
+**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/authorize" -d '{"transactionid":"(transactionid)"}'"`    
 
 **Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" }`
 
+---------------------------------------
+
+## POST - /resetcadence
+
+
+Resets the cadence of any user whose password is changed.
+
+#### Required Parameters
+
+- **user** - Login Id or Username
+
+
+#### Return Values
+
+- **status** - String 'LW_Success' or 'LW_Failure'. If it's an LW_Failure, the specific message is included in the 'error' return value.
+
+
+### Examples
+
+**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/resetcadence" -d '{"user":"(username)"}'"`    
+
+**Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" }`
 ---------------------------------------
 
 ## POST - /account
