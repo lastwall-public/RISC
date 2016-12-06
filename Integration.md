@@ -100,7 +100,7 @@ Resets the cadence of any user whose password is changed.
 
 #### Required Parameters
 
-- **user** - Login Id or Username
+- **username** - Login Id or Username
 
 
 #### Return Values
@@ -110,7 +110,7 @@ Resets the cadence of any user whose password is changed.
 
 ### Examples
 
-**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/resetcadence" -d '{"user":"(username)"}'"`    
+**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/resetcadence" -d '{"username":"(username)"}'"`    
 
 **Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" }`
 ---------------------------------------
