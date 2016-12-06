@@ -47,7 +47,10 @@ Authenticates a user based on a RISC payload. Returns a trust score indicating t
 
 #### Required Parameters
 
+- **username** - Login Id or Username
 - **riscdata** - JSON payload of data collected by "script"
+- **kvcookie** - Cookie received through headers
+- **ipaddress** - Client IP Address
 
 
 #### Return Values
@@ -62,7 +65,7 @@ Authenticates a user based on a RISC payload. Returns a trust score indicating t
 
 ### Examples
 
-**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/auth" -d '{"riscdata":"(jsonvals_riscdata)"}'"`    
+**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/auth" -d '{"username":"(username)","riscdata":"(jsonvals_riscdata)", "kvcookie":"(kvcookie)","ipaddress":"(User IP Address)"}'"`    
 
 **Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" , "trust" : "HIGH" , "score" : "0.87538745", "digitalCookie":"2342_kfljsfoeicsldkfjowe234skfj3", "secureCookie":"2435_jl2i3rlkeod3iruwelkf3iuro23jfwe", "transactionid":"a234bc567"}`
 
@@ -120,7 +123,9 @@ Based on a RISC payload. Returns a trust score indicating the level of RISK asso
 
 #### Required Parameters
 
+- **username** - Login Id or Username
 - **riscdata** - JSON payload of data collected by "script"
+- **ipaddress** - Client IP Address
 
 
 #### Return Values
@@ -131,7 +136,7 @@ Based on a RISC payload. Returns a trust score indicating the level of RISK asso
 
 ### Examples
 
-**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/account" -d '{"riscdata":"(jsonvals_riscdata)"}'"`    
+**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/account" -d '{"username":"(username)","riscdata":"(jsonvals_riscdata)","ipaddress":"(Client IP Address)"}'"`    
 
 **Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" , "trust" : "HIGH" , "score" : "0.87538745"}`
 
