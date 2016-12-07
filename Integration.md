@@ -60,14 +60,13 @@ Authenticates a user based on a RISC payload. Returns a trust score indicating t
 - **score** - Trust score (0 - 1).
 - **digitalcookie** - This needs to be returned back to the browser in json response.
 - **securecookie** - This needs to be sent to the browser through Headers.
-- **transactionid** - Transaction Id for future reference.
 
 
 ### Examples
 
 **Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/auth" -d '{"username":"(username)","riscdata":"(jsonvals_riscdata)", "kvcookie":"(kvcookie)","ipaddress":"(User IP Address)"}'"`    
 
-**Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" , "trust" : "HIGH" , "score" : "0.87538745", "digitalCookie":"2342_kfljsfoeicsldkfjowe234skfj3", "secureCookie":"2435_jl2i3rlkeod3iruwelkf3iuro23jfwe", "transactionid":"a234bc567"}`
+**Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" , "trust" : "HIGH" , "score" : "0.87538745", "digitalCookie":"2342_kfljsfoeicsldkfjowe234skfj3", "secureCookie":"2435_jl2i3rlkeod3iruwelkf3iuro23jfwe"}`
 
 ---------------------------------------
 
@@ -77,7 +76,12 @@ Authorize a transaction with low trust.  This needs to be called for the transac
 
 #### Required Parameters
 
-- **transactionid** - Transaction Id returned by /auth
+#### Required Parameters
+
+- **username** - Login Id or Username
+- **riscdata** - JSON payload of data collected by "script"
+- **kvcookie** - Cookie received through headers
+- **ipaddress** - Client IP Address
 
 
 #### Return Values
@@ -87,7 +91,7 @@ Authorize a transaction with low trust.  This needs to be called for the transac
 
 ### Examples
 
-**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/authorize" -d '{"transactionid":"(transactionid)"}'"`    
+**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/authorize" -d '{"username":"(username)","riscdata":"(jsonvals_riscdata)", "kvcookie":"(kvcookie)","ipaddress":"(User IP Address)"}'"`    
 
 **Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" }`
 
