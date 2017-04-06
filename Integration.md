@@ -79,9 +79,7 @@ Authorize a transaction with low trust.  This needs to be called for the transac
 #### Required Parameters
 
 - **username** - Login Id or Username
-- **riscdata** - JSON payload of data collected by "script"
-- **kvcookie** - Cookie received through headers
-- **ipaddress** - Client IP Address
+- **deviceId** - JSON payload of data collected by "script"
 
 
 #### Return Values
@@ -91,7 +89,7 @@ Authorize a transaction with low trust.  This needs to be called for the transac
 
 ### Examples
 
-**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/authorize" -d '{"username":"(username)","riscdata":"(jsonvals_riscdata)", "kvcookie":"(kvcookie)","ipaddress":"(User IP Address)"}'"`    
+**Request:** `curl -X POST -H "(headers)" "https://risc.lastwall.com/api/authorize" -d '{"username":"(username)","deviceId":"(deviceId)"}'"`    
 
 **Response:** `HTTP/1.1 200 OK`    `{ "status": "LW_Success" }`
 
