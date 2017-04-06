@@ -79,7 +79,7 @@ Authorize a transaction with low trust.  This needs to be called for the transac
 #### Required Parameters
 
 - **username** - Login Id or Username
-- **deviceId** - JSON payload of data collected by "script"
+- **deviceId** - Device Id
 
 
 #### Return Values
